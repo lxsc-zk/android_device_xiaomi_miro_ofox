@@ -16,7 +16,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, device/xiaomi/qcom/device.mk)
 
 PRODUCT_DEVICE := miro
-PRODUCT_NAME := omni_miro
+PRODUCT_NAME := twrp_miro
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi K80 Pro
 PRODUCT_MANUFACTURER := xiaomi

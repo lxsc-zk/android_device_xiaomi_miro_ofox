@@ -18,6 +18,3 @@ export FOX_VIRTUAL_AB_DEVICE=1
 # 4. FBEv2 硬件解密版本
 export OF_DEFAULT_KEYMASTER_VERSION=4.1
 
-# 5. 注册 Lunch 选项
-add_lunch_combo omni_miro-userdebug
-add_lunch_combo omni_miro-eng

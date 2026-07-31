@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_miro.mk
+    $(LOCAL_DIR)/twrp_miro.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_miro-user \
-    omni_miro-userdebug \
-    omni_miro-eng
+    twrp_miro-user \
+    twrp_miro-userdebug \
+    twrp_miro-eng
