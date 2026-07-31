@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/xiaomi/qcom
+LOCAL_PATH := device/xiaomi/miro
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -20,12 +20,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     bootctrl.xiaomi_sm8750
-
-#PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-#    bootctrl.xiaomi_sm8750 \
-#    libgptutils \
-#    libz \
-#    libcutils
 
 PRODUCT_PACKAGES += \
     otapreopt_script \

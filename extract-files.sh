@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=qcom
+DEVICE=miro
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks

@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/qcom
+DEVICE_PATH := device/xiaomi/miro
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -97,3 +97,10 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
+
+# Building vendor_boot
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
+BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
+
+# Virtual A/B Compression
+ENABLE_VIRTUAL_AB := true
