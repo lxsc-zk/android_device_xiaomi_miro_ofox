@@ -20,7 +20,7 @@ AB_OTA_PARTITIONS += \
     vendor_dlkm \
     system \
     product
-BOARD_USES_RECOVERY_AS_BOOT := true
+#BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -99,8 +99,10 @@ TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 
 # Building vendor_boot
+BOARD_BUILD_VENDOR_BOOT_IMAGE := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 
 # Virtual A/B Compression
 ENABLE_VIRTUAL_AB := true
+
