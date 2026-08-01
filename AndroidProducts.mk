@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_miro.mk
+    device/xiaomi/miro/twrp_miro.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_miro-user \
-    twrp_miro-userdebug \
-    twrp_miro-eng
+    twrp_miro-ap2a-eng \
+    twrp_miro-ap2a-userdebug \
+    twrp_miro-ap2a-user
