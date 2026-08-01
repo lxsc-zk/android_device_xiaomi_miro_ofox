@@ -5,25 +5,16 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# Enforce Vendor Boot Product Flag
+PRODUCT_BUILD_VENDOR_BOOT_IMAGE := true
 
-# Inherit some common Omni stuff.
-# $(call inherit-product, vendor/omni/config/common.mk)
+# Inherit generic & TWRP configs
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
-# Inherit from qcom device
-$(call inherit-product, device/xiaomi/miro/device.mk)
-
-PRODUCT_DEVICE := miro
+# Device Identifier
 PRODUCT_NAME := twrp_miro
+PRODUCT_DEVICE := miro
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi K80 Pro
-PRODUCT_MANUFACTURER := xiaomi
-
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="twrp_miro-eng 99.87.36 BP2A.250605.031.A2 eng.lu test-keys"
-
-BUILD_FINGERPRINT := Xiaomi/twrp_miro/qcom:99.87.36/BP2A.250605.031.A2/eng.lu:eng/test-keys
+PRODUCT_MODEL := Xiaomi 15
+PRODUCT_MANUFACTURER := Xiaomi
