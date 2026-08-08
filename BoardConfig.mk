@@ -31,7 +31,6 @@ BOARD_BUILD_VENDOR_BOOT_IMAGE := true
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 104857600
 BOARD_PAGE_SIZE := 4096
 BOARD_BOOT_HEADER_VERSION := 4
-# 修正：同步修改这里的变量名，确保传参正确的 header_version 4
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # Internal flag for vendor boot
@@ -107,11 +106,6 @@ TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 ENABLE_VIRTUAL_AB := true
 
-# OrangeFox Configuration
-FOX_USE_VENDOR_BOOT := 1
-FOX_VENDOR_BOOT_RECOVERY := 1
-FOX_TARGET_DEVICES := miro
-
 # Recovery fstab file path
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 
@@ -119,6 +113,5 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 FOX_USE_VENDOR_BOOT := 1
 FOX_VENDOR_BOOT_RECOVERY := 1
 FOX_TARGET_DEVICES := miro
-# 禁用 OrangeFox 尝试重新构造 init.d 和旧版 System-As-Root
 FOX_REPLACE_BUSYBOX_PS := 1
 OF_DISABLE_INITD := 1
