@@ -111,3 +111,14 @@ ENABLE_VIRTUAL_AB := true
 FOX_USE_VENDOR_BOOT := 1
 FOX_VENDOR_BOOT_RECOVERY := 1
 FOX_TARGET_DEVICES := miro
+
+# Recovery fstab file path
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
+
+# OrangeFox Configuration
+FOX_USE_VENDOR_BOOT := 1
+FOX_VENDOR_BOOT_RECOVERY := 1
+FOX_TARGET_DEVICES := miro
+# 禁用 OrangeFox 尝试重新构造 init.d 和旧版 System-As-Root
+FOX_REPLACE_BUSYBOX_PS := 1
+OF_DISABLE_INITD := 1
