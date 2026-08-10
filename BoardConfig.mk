@@ -66,15 +66,13 @@ AB_OTA_PARTITIONS += \
 # Bootloader & Kernel
 TARGET_BOOTLOADER_BOARD_NAME := sun
 TARGET_NO_BOOTLOADER := true
+TARGET_NO_KERNEL := true
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_CONFIG := qcom_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/qcom
 
 # Kernel - prebuilt
-TARGET_FORCE_PREBUILT_KERNEL := true
-ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
-endif
+TARGET_FORCE_PREBUILT_KERNEL := false
 
 # Platform
 TARGET_BOARD_PLATFORM := xiaomi_sm8750
