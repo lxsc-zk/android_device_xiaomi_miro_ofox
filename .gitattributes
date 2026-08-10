@@ -1,0 +1,2 @@
+prebuilt/* filter=lfs diff=lfs merge=lfs -text
+prebuilt/kernel filter=lfs diff=lfs merge=lfs -text
